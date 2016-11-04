@@ -1,10 +1,11 @@
 {
-  "name": "ng2test",
+  "name": "web.term",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm i && tsc && concurrently \"tsc -w\" \"electron .\" ",
+    "test": "mocha test"
   },
   "dependencies": {
     "@angular/common": "~2.1.1",
@@ -30,6 +31,10 @@
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Robert Masen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freemasen/web.term"
+  }
 }

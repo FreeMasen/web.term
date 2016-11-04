@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
-import { AppComponent } from './app.component'
+import { AppComponent } from './component'
+import { Dashboard } from './dashboard/component'
+
+import { Router } from './router/module'
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        Router
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        Dashboard
     ],
     bootstrap: [
         AppComponent
