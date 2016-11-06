@@ -8,7 +8,7 @@ const routes: Routes = [
     {path: 'dashboard', component: Dashboard }
 ]
 
-NgModule({
+@NgModule({
     imports: [
         RouterModule.forRoot(routes)
     ],
