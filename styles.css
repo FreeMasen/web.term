@@ -1,0 +1,28 @@
+* {
+    font-family: sans-serif;
+}
+
+[color="primary"] {
+    background-color: skyblue;
+}
+
+[color="accent"] {
+    background-color: lightcoral;
+}
+
+[color="warn"] {
+    background-color: darkred;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: space-around; 
+    padding: 10px 0;
+}
+
+.nav-button {
+    
+
+}
