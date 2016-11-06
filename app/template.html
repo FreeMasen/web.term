@@ -1,2 +1,9 @@
 <h1>App Title</h1>
+<div>
+    <ul id="nav links" class="nav">
+        <li *ngFor="let page of pages" >
+            <button class="nav-button" md-raised-button color="primary" (click)="goTo(page)">{{page.name}}</button>
+        </li>
+    </ul>
+</div>
 <router-outlet></router-outlet>
