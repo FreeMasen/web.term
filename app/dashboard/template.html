@@ -1,3 +1,32 @@
+<link type="text/css" rel="stylesheet" href="styles.css" />
 <md-card>
-    <md-card-title>Dashboard</md-card-title>
+    <md-card-title id="main-title">Dashboard</md-card-title>
+    <md-card-subtitle id="website-name">{{ name }}</md-card-subtitle>
+    <md-card-content>
+        <ul id="dash" class="nav">
+            <li *ngFor="let page of pages" >
+                <md-card class="page">
+                    <md-card-title class="page-name">{{ page.name }}</md-card-title>
+                    <md-card-content>
+                        <h3>Contents</h3>
+                        <ul>
+                            <li *ngFor="let element of page.elements" class="elements">
+                                {{ element.name }}
+                                <ul>
+                                    <li *ngFor="let attribute of element.attributes">
+                                        {{ attribute.name }}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </md-card-content>
+                    <md-card-actions class="go">
+                        <button class="dash-button" md-raised-button color="accent" (click)="goTo(page)">
+                            Go
+                        </button>
+                    </md-card-actions>
+                </md-card>
+            </li>
+        </ul>
+    </md-card-content>
 </md-card>

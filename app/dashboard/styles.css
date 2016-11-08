@@ -1,0 +1,16 @@
+#main-title {
+    margin: 0;
+    padding: 0;
+}
+
+#website-name {
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+#dash {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+}
+
