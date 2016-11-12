@@ -12,7 +12,6 @@ import { AnalyticsService } from '../services/analyticsService'
 })
 
 export class Dashboard implements OnInit {
-    name = 'RobertMasen.pizza'
     pages = []
     messages = []
     metrics = []
@@ -49,8 +48,19 @@ export class Dashboard implements OnInit {
         })
     }
 
-    goToPage(page) {
+    goToComponent(name): void {
+        this.router.navigate(['/', name])
+    }
+
+    goToPage(page): void {
         this.router.navigate(['/pages', page.name])
     }
 
+    goToMessage(id) {
+        this.router.navigate(['/messages', id])
+    }
+    
+    goToMetric(name) {
+        this.router.navigate(['/analytics', name])
+    }
 }
