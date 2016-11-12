@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -19,6 +19,27 @@ function createWindow () {
 
   // Open the DevTools.
   win.webContents.openDevTools()
+
+
+  let menu = Menu.buildFromTemplate([
+    {
+      label: 'WebTerm',
+      submenu: [
+        {
+          label: 'reload',
+          accelerator: 'CmdOrCtrl+R',
+          click (item, focusedWindow) {
+            focusedWindow.loadURL(url.format({
+              pathname: path.join(__dirname, 'index.html'),
+              protocol: 'file:',
+              slashes: true
+            }))
+          }
+        }
+      ]
+    }
+  ])
+  Menu.setApplicationMenu(menu)
 
   // Emitted when the window is closed.
   win.on('closed', () => {
