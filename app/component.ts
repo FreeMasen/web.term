@@ -1,8 +1,5 @@
 import { Component } from '@angular/core'
 
-import { Page } from './models/page'
-import { Pages } from './services/pages'
-
 import './util/rxjs'
 
 @Component({
@@ -11,16 +8,31 @@ import './util/rxjs'
 })
 export class AppComponent { 
     
-    constructor(private pagesService: Pages) {}
-    pages: Page[] = []
-    private pagesObserver = this.pagesService.get()
-    private pageStream = this.pagesObserver.subscribe(
-        value => { 
-            console.log('observer.next')
-            this.pages.push(value)
+    constructor() {}
+
+    components = [
+        {
+            name: 'Dashboard',
+            link: '/dashboard'
         },
-        error => { console.error(error)}
-    )
+        {
+            name: 'Messages',
+            link: '/messages'
+        },
+        {
+            name: 'Analytics',
+            link: '/analytics'
+        },
+        {
+            name: 'Preferences',
+            link: '/preferences'
+        }
+    ]
+
+    website = {
+        name: 'RobertMasen.pizza',
+        url: 'http://robertmasen.com'
+    }
 
     goTo(page) {
         console.log('goTo')
