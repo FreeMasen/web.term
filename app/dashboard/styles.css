@@ -1,5 +1,5 @@
 #main-title {
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
 }
 
@@ -8,9 +8,70 @@
     padding: 0;
 }
 
-#dash {
+.nav {
+    width: 90%;
+    margin: auto;
+}
+
+#dash-pages {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+}
+
+#dash-messages {
     display: flex;
     flex-direction: column;
     flex-flow: column;
 }
 
+.card-description {
+    margin: 0 0 0 5%;
+}
+
+.message {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    border: white 2px solid;
+    padding: 2px 0 2px 0;
+}
+
+.from {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.message-contact {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.message-contact-main {
+    font-size: 16pt;
+    margin: 0 0 0 2px;
+}
+
+.message-contact-suppliment {
+    font-size: 10pt;
+    font-style: oblique;
+    margin: 5px 0 0 2px;
+}
+
+.message-reason {
+    font-size: 14pt;
+    margin: 5px 0 0 2px;
+    font-weight: 500;
+
+}
+
+.message-content {
+    font-size: 12pt;
+    width: 95%;
+    margin: 2px 2.5% 0 2.5%;
+    border: white;
+    background: white;
+    max-height: 5.6em;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+}
