@@ -1,4 +1,5 @@
 export class Message {
+    _id: string
     name: string
     email: string
     reason: string
