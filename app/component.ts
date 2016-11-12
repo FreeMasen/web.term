@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 
 import './util/rxjs'
 
@@ -8,7 +9,7 @@ import './util/rxjs'
 })
 export class AppComponent { 
     
-    constructor() {}
+    constructor(private router: Router) {}
 
     components = [
         {
@@ -34,9 +35,8 @@ export class AppComponent {
         url: 'http://robertmasen.com'
     }
 
-    goTo(page) {
-        console.log('goTo')
-        console.log(page)
+    goTo(component) {
+        this.router.navigate(['/', component.name.toLowerCase()])
     }
 
 }
