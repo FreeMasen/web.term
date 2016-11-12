@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"electron .\" ",
+    "start": "tsc && electron .",
     "test": "mocha test"
   },
   "dependencies": {
