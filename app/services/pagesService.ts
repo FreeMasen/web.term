@@ -77,7 +77,13 @@ export class PagesService {
             })
         })
     }
-    private lastIndex = 0
+    getPageNames(): Observable<string> {
+        return Observable.create(observer => {
+            pages.forEach(page => {
+                observer.next(page.name)
+            })
+        })
+    }
 
     update(page: Page): Promise<boolean> {
         return new Promise((resolve, reject) => {
