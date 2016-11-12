@@ -4,9 +4,18 @@ import { MaterialModule } from '@angular/material'
 
 import { AppComponent } from './component'
 import { Dashboard } from './dashboard/component'
+import { MessageDetail } from './messageDetail/component'
+import { Messages } from './messages/component'
+import { MetricDetail } from './metricDetail/component'
+import { Metrics } from './metrics/component'
+import { PageDetail } from './pageDetail/component'
+import { Pages } from './pages/component'
 
 import { Router } from './router/module'
-import { Pages } from './services/pages'
+
+import { PagesService } from './services/pagesService'
+import { MessagesService } from './services/messagesService'
+import { AnalyticsService } from './services/analyticsService'
 
 import './util/rxjs'
 
@@ -18,10 +27,18 @@ import './util/rxjs'
     ],
     declarations: [
         AppComponent,
-        Dashboard
+        Dashboard,
+        MessageDetail,
+        Messages,
+        MetricDetail,
+        Metrics,
+        PageDetail,
+        Pages
     ],
     providers: [
-        Pages
+        PagesService,
+        MessagesService,
+        AnalyticsService
     ],
     bootstrap: [
         AppComponent

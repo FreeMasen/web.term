@@ -68,7 +68,7 @@ let pages: Page[] = [{
 }]
 
 @Injectable()
-export class Pages {
+export class PagesService {
     private internalValues = pages.values()
     get(): Observable<Page> {
         return Observable.create(observer => {
