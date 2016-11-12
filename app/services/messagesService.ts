@@ -5,6 +5,7 @@ import { Message } from '../models/message'
 
 let mocks: Message[] = [
     {
+        _id: 'T0',
         name: 'Robert Masen',
         email: 'r.f.masen@gmail.com',
         reason: 'employment',
@@ -14,6 +15,7 @@ let mocks: Message[] = [
         read: false
     },
     {
+        _id: 'T1',
         name: 'Robert Masen',
         email: 'r.f.masen@gmail.com',
         reason: 'employment',
@@ -23,6 +25,7 @@ let mocks: Message[] = [
         read: false
     },
     {
+        _id: 'T2',
         name: 'Robert Masen',
         email: 'r.f.masen@gmail.com',
         reason: 'employment',
