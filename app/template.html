@@ -1,8 +1,8 @@
-<h1>App Title</h1>
+<h1>{{website.name}}</h1>
 <div>
     <ul id="nav links" class="nav">
-        <li *ngFor="let page of pages" >
-            <button class="nav-button" md-raised-button color="primary" (click)="goTo(page)">{{page.name}}</button>
+        <li *ngFor="let component of components" >
+            <button class="nav-button" md-raised-button color="primary" (click)="goTo(component)">{{component.name}}</button>
         </li>
     </ul>
 </div>
