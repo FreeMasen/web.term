@@ -8,6 +8,7 @@ import { Messages } from '../messages/component'
 import { MessageDetail } from '../messageDetail/component'
 import { Metrics } from '../metrics/component'
 import { MetricDetail } from '../metricDetail/component'
+import { Preferences } from '../preferences/component'
 
 const routes: Routes = [
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
     {path: 'messages/:id', component: MessageDetail},
     {path: 'analytics', component: Metrics},
     {path: 'analytics/:id', component: MetricDetail},
+    {path: 'preferences', component: Preferences }
 ]
 
 @NgModule({
