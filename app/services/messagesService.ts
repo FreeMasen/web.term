@@ -57,5 +57,22 @@ export class MessagesService {
                 observer.next(message)
             })
         })
-    } 
+    }
+
+    getArchive(): Observable<Message> {
+        return Observable.create(observer => {
+            observer.error(new Error('Not yet implemented'))
+        })
+    }
+
+    getMessage(id) {
+        return Observable.create(observer => {
+            mocks.forEach(message => {
+                if (message._id == id) {
+                    return observer.next(message)
+                }
+                observer.error(new Error('No message with that ID available'))
+            })
+        })
+    }
 }

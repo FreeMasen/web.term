@@ -1,3 +1,41 @@
-<h1>
-    Messages
-</h1>
+<md-card>
+    <md-card-title>Messages</md-card-title>
+    <md-card-content>
+        <ul id="messages">
+            <li *ngFor="let message of messages" class="message" (click)="messageDetails(message)">
+                <div class="from">From: </div>
+                <div class="message-contact">
+                <h3 class="message-contact-main">{{message.name}} ({{message.email}})</h3>
+                <small class="message-contact-suppliment" *ngIf="message.reason == 'employment'">
+                    {{ message.company}}: {{message.roll }}</small>
+                </div>
+                <h4 class="message-reason">Reason: {{message.reason}}</h4>
+                <div class="message-content">{{message.content}}</div>
+                <md-card-actions>
+                    <div class="inbox-actions">
+                        <button md-mini-fab color="warn" (click)="archiveMessage(message.id)">
+                            <md-icon class="md-15">archive</md-icon>
+                        </button>
+                        <button md-mini-fab color="warn" (click)="deleteMessage(message.id)">
+                            <md-icon class="md-15">delete</md-icon>
+                        </button>
+                        <button md-mini-fab color="warn">
+                            <md-icon class="md-24">markunread</md-icon>
+                        </button>
+                    </div>
+                    <div class="message-actions">
+                        <button md-mini-fab color="accent" (click)="reply(message)">
+                            <md-icon class="md-24">reply</md-icon>
+                        </button>
+                        <button md-mini-fab color="accent" (click)="reply(message)">
+                            <md-icon class="md-24">reply_all</md-icon>
+                        </button>
+                        <button md-mini-fab color="accent" (click)="forward(message)">
+                            <md-icon class="md-24">forward</md-icon>
+                        </button>
+                    </div>
+                </md-card-actions>
+            </li>
+        </ul>
+    </md-card-content>
+</md-card>

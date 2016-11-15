@@ -1,0 +1,88 @@
+md-card-content {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+#messages {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    background-color: whitesmoke;
+    list-style: none;
+    padding: 5px;
+}
+
+.message {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 5px;
+    border: white 2px solid;
+    padding: 2px 0 2px 0;
+}
+
+.from {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.message-contact {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.message-contact-main {
+    font-size: 14pt;
+    font-weight: 500;
+    margin: 0 0 0 2px;
+}
+
+.message-contact-suppliment {
+    font-size: 10pt;
+    font-style: oblique;
+    margin: 5px 0 0 2px;
+}
+
+.message-reason {
+    font-size: 14pt;
+    margin: 5px 0 0 2px;
+    font-weight: 500;
+}
+
+.message-content {
+    font-size: 12pt;
+    width: 95%;
+    margin: 2px 2.5% 0 2.5%;
+    border: white;
+    background: white;
+    max-height: 5.6em;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    line-height: 14pt;
+}
+
+md-card-actions {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.inbox-actions {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-left: 15px;
+}
+
+.message-actions {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-right: 15px
+}
+
+button {
+    margin: 0 2px 0;
+}
